@@ -1,0 +1,24 @@
+<h2>Posts</h2>
+<%=link_to "create new",new_path%>
+<table border="1">
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Desc</td>
+            <td>Status</td>
+            <td>Show</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <% @posts.each do |ele| %>
+        <tr>
+            <td><%=ele.title%></td>
+            <td><%=ele.description%></td>
+            <td><%=ele.status%></td>
+            <td><%=link_to "Show",show_path(ele.id)%></td>
+            <td><%=link_to "Edit",edit_path(ele.id)%></td>
+            <td><%=link_to "Delete",destroy_path(ele.id)%></td>
+        </tr> 
+    <% end %>
+</table>

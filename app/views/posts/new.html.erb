@@ -1,0 +1,9 @@
+<%= form_with model: @post, method: :post do |form| %>
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title %><br/>
+  <%= form.label :description, "Desc" %>
+  <%= form.text_field :description %><br/>
+  <%= form.label :status, "Status" %>
+  <%= form.check_box :status %><br/>
+  <%= form.submit "Save"%>
+<% end %>
